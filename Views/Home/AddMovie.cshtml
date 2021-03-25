@@ -1,0 +1,49 @@
+﻿@model  Movie
+
+
+
+<form asp-action="AddMovie" method="post">
+    <div>
+        <label asp-for="Category">Category:</label>
+        <input asp-for="Category" />
+    </div>
+    <div>
+        <label asp-for="Title">Title:</label>
+        <input asp-for="Title" />
+    </div>
+    <div>
+        <label asp-for="Year">Year:</label>
+        <input asp-for="Year" />
+    </div>
+    <div>
+        <label asp-for="Director">Director:</label>
+        <input asp-for="Director" />
+    </div>
+    <div>
+        <label asp-for="Rating">Rating:</label>
+        <select asp-for="Rating">
+            <option value="">Select the Rating</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG13">PG-13</option>
+            <option value="R">R</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Edited">Has this been edited?</label>
+        <input type="checkbox"/>
+  
+    </div>
+    <div>
+        <label asp-for="LentTo">Who was this film lent to?:</label>
+        <input asp-for="LentTo" />
+    </div>
+    <div>
+        <label asp-for="Notes">Enter Notes Here:</label>
+        <textarea asp-for="Notes"></textarea>
+    </div>
+    <button type="submit">Add Movie</button>
+    <br />
+
+    <div asp-validation-summary="All"></div>
+</form>
